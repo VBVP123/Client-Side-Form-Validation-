@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="formstyles.css" />
+</head>
+<body>
+    <script src="Validationform.js"></script>
+    <form id="forms" onsubmit="return validateForm();">
+        <h1>Join Our Team</h1>
+        <h3>We are hiring Frontend Developer!</h3>
+        <input type="text" id="name" placeholder="Name" onblur="validateName()" />
+        <span id="nameerror" class="error"></span><br><br>
+        
+        <input type="text" id="email" placeholder="Email" onblur="validateEmail()" />
+        <span id="emailerror" class="error"></span><br><br>
+        
+        <input type="text" id="phone" placeholder="Phone Number" onblur="validatePhone()" />
+        <span id="phoneerror" class="error"></span><br><br>
+        
+        <textarea id="address" placeholder="Address" onblur="validateAddress()"></textarea>
+        <span id="addresserror" class="error"></span><br><br>
+        
+        Upload Resume<input type="file" id="resume" accept=".pdf,.docx" onchange="validateResume()" />
+        <span id="resumeerror" class="error"></span><br><br>
+        <input type="checkbox" required>I agree to the terms and conditions
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
